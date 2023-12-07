@@ -1,0 +1,130 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int decision;
+    int donutsCollected = 0; // Contador de donas recolectadas
+
+    cout << "¡Homero Simpson tiene hambre y su objetivo es conseguir 3 donas, tiene que recorerr Springfield en busca de ellas!" << endl;
+
+    while (true) {
+        if (donutsCollected >= 3) {
+            cout << "\n¡Felicidades! ¡Homero ha conseguido 3 donas y ha completado su objetivo!" << endl;
+            return 0;
+        }
+
+        cout << "\nElige una opción:" << endl;
+        cout << "1. La Taberna de Moe" << endl;
+        cout << "2. La llamada de Marge" << endl;
+        cout << "3. Ir al Reactor Nuclear" << endl;
+        cout << "4. Ir al Krusty Burger" << endl;
+        cout << "5. Volver a casa" << endl;
+        cout << "6. Salir del juego" << endl;
+        cout << "\nDonas recolectadas: " << donutsCollected << endl;
+
+        cin >> decision;
+
+        switch (decision) {
+            case 1: {
+                cout << "\n¡Estás en la Taberna de Moe! ¿Qué quieres hacer?" << endl;
+                cout << "1. Tomar una cerveza" << endl;
+                cout << "2. Evitar la cerveza" << endl;
+                cout << "3. Comer un snack" << endl;
+
+                cin >> decision;
+
+                if (decision == 1) {
+                    cout << "\n¡Te emborrachaste en la taberna!" << endl;
+                } else if (decision == 2) {
+                    cout << "\nDecidiste evitar la cerveza. Continúa tu búsqueda." << endl;
+                } else {
+                    cout << "\nMoe te saca ¡PROHIBIDA LA COMIDA AJENA!" << endl;
+                    donutsCollected++;
+                }
+                break;
+            }
+
+            case 2:
+                cout << "\n Marge te llama para ir a la junta escolar" << endl;
+                cout << "1. Ir sin refunfuñar" << endl;
+                cout << "2. Ir ebrio" << endl;
+                cout << "3. No contestas" << endl;
+
+                cin >> decision;
+
+                if (decision == 1) {
+                    cout << "\nAl final dieron donas,¡Conseguiste una dona en la escuela!." << endl;
+                  donutsCollected++;
+                } else if (decision == 2) {
+                    cout << "\nMaldijiste al director y te vetan de la escuela" << endl;
+
+                } else {
+                    cout << "\nEres hombre muerto" << endl;
+                }
+                break;
+
+            case 3:
+                cout << "\nVas al Reactor Nuclear. ¿Qué quieres hacer?" << endl;
+                cout << "1. Trabajar en el reactor" << endl;
+                cout << "2. Buscar donas en el reactor" << endl;
+                cout << "3. Trabajas ebrio" << endl;
+
+                cin >> decision;
+
+                if (decision == 1) {
+                    cout << "\nEstás trabajando en el reactor." << endl;
+                } else if (decision == 2) {
+                    cout << "\n¡Felicidades! ¡Conseguiste una dona en el reactor!" << endl;
+                    donutsCollected++;
+                } else {
+                    cout << "\nProvocas un accidente nuclear en toda Springfield" << endl;
+                }
+                break;
+
+            case 4:
+                cout << "\nEstás en el Krusty Burger. ¿Qué quieres hacer?" << endl;
+                cout << "1. Pedir una hamburguesa gigante" << endl;
+                cout << "2. Comprar papas fritas" << endl;
+                cout << "3. Mirar el menú sin comprar nada" << endl;
+
+                cin >> decision;
+
+                if (decision == 1) {
+                    cout << "\n¡Pediste una hamburguesa gigante! Demasiada comida, no hay espacio para donas." << endl;
+                } else if (decision == 2) {
+                    cout << "\nCompraste papas fritas. Sigues hambriento." << endl;
+                } else {
+                    cout << "\nDecidiste mirar el menú sin comprar nada." << endl;
+                }
+                break;
+
+            case 5:
+                cout << "\nEstás en casa. ¿Qué quieres hacer ahora?" << endl;
+                cout << "1. Dormir" << endl;
+                cout << "2. Ver la televisión" << endl;
+                cout << "3. Explorar las profundidades del sillón" << endl;
+
+                cin >> decision;
+
+                if (decision == 1) {
+                    cout << "\n¡Levántate! Aún tienes hambre." << endl;
+                } else if (decision == 2) {
+                    cout << "\nEstás viendo la televisión." << endl;
+                } else {
+                    cout << "\n¡Felicidades! ¡Conseguiste una dona en casa!" << endl;
+                    donutsCollected++;
+                }
+                break;
+
+            case 6:
+                cout << "\n¡Hasta luego, esperamos verte pronto!" << endl;
+                return 0;
+
+            default:
+                cout << "\nOpción inválida. Por favor, elige una opción del 1 al 6." << endl;
+                break;
+        }
+    }
+
+    return 0;
+}
